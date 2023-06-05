@@ -12,9 +12,13 @@ export default function App() {
         <Provider store={store}>
             <NavigationContainer>
                 <Stack.Navigator initialRouteName="ShowList">
-                    <Stack.Screen name="ShowList" component={ShowList} />
-                    {/* @ts-ignore*/}
-                    <Stack.Screen name="ShowDetails" component={ShowDetails} />
+                    <Stack.Screen name="ShowList" component={ShowList} options={{ title: 'Show List' }} />
+                    <Stack.Screen
+                        name="ShowDetails"
+                        //@ts-ignore
+                        component={ShowDetails}
+                        options={{ title: 'Show Details' }}
+                    />
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>
